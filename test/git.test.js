@@ -39,4 +39,14 @@ describe("Testing Operations", function() {
 
         expect(res).to.equal(randomNum1 + randomNum2)
     })
+
+    it('Should return the correct result when combining two random numbers while using the subtraction operation', function() {
+        let randomNum1 = Math.floor(Math.random() * (999 - 99) + 99)
+        let randomNum2 = Math.floor(Math.random() * (999 - 99) + 99)
+
+        let op = new Operations()
+        let res = op.subtract(randomNum1, randomNum2)
+
+        expect(res).to.equal(randomNum1 - randomNum2)
+    })
 })
